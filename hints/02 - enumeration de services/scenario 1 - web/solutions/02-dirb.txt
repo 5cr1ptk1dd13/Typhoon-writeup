@@ -1,0 +1,73 @@
+root@DKVN-WHEDO:~# dirb http://192.168.1.104
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+URL_BASE: http://192.168.1.104/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612                                                          
+
+---- Scanning URL: http://192.168.1.104/ ----
+==> DIRECTORY: http://192.168.1.104/assets/                                            
+==> DIRECTORY: http://192.168.1.104/calendar/                                          
++ http://192.168.1.104/cgi-bin/ (CODE:403|SIZE:288)      
+
+==> DIRECTORY: http://192.168.1.104/cms/   
+==> DIRECTORY: http://192.168.1.104/drupal/
+==> DIRECTORY: http://192.168.1.104/javascript/                                        
+==> DIRECTORY: http://192.168.1.104/phpmyadmin/                                        
++ http://192.168.1.104/robots.txt (CODE:200|SIZE:37)                                   
++ http://192.168.1.104/server-status (CODE:403|SIZE:293)
+
+---- Entering directory: http://192.168.1.104/calendar/ ----
++ http://192.168.1.104/calendar/admin.php (CODE:302|SIZE:479)                          
+==> DIRECTORY: http://192.168.1.104/calendar/calendar/                                 
+==> DIRECTORY: http://192.168.1.104/calendar/docs/                       
++ http://192.168.1.104/calendar/TODO (CODE:200|SIZE:3633)                              
+==> DIRECTORY: http://192.168.1.104/calendar/tools/                                    
+==> DIRECTORY: http://192.168.1.104/calendar/translations/                             
+==> DIRECTORY: http://192.168.1.104/calendar/ws/                                       
+
+---- Entering directory: http://192.168.1.104/cms/ ----
+==> DIRECTORY: http://192.168.1.104/cms/cache/                                         
+==> DIRECTORY: http://192.168.1.104/cms/core/                                          
++ http://192.168.1.104/cms/data (CODE:403|SIZE:288)                                    
++ http://192.168.1.104/cms/favicon.ico (CODE:200|SIZE:23126)                           
++ http://192.168.1.104/cms/index.php (CODE:200|SIZE:1587)                              
+==> DIRECTORY: http://192.168.1.104/cms/modules/                                       
+==> DIRECTORY: http://192.168.1.104/cms/style/                                         
+
+---- Entering directory: http://192.168.1.104/drupal/ ----
++ http://192.168.1.104/drupal/admin (CODE:403|SIZE:8118)                               
++ http://192.168.1.104/drupal/Admin (CODE:403|SIZE:8118)                               
++ http://192.168.1.104/drupal/ADMIN 
+           
+---- Entering directory: http://192.168.1.104/calendar/calendar/ ----
++ http://192.168.1.104/calendar/calendar/admin.php (CODE:302|SIZE:479)                 
+==> DIRECTORY: http://192.168.1.104/calendar/calendar/docs/                            
++ http://192.168.1.104/calendar/calendar/favicon.ico (CODE:200|SIZE:3262)              
+==> DIRECTORY: http://192.168.1.104/calendar/calendar/icons/                           
+==> DIRECTORY: http://192.168.1.104/calendar/calendar/images/                          
+==> DIRECTORY: http://192.168.1.104/calendar/calendar/includes/                        
++ http://192.168.1.104/calendar/calendar/index.php (CODE:302|SIZE:479)                 
+==> DIRECTORY: http://192.168.1.104/calendar/calendar/install/                         
+==> DIRECTORY: http://192.168.1.104/calendar/calendar/tests/                           
+==> DIRECTORY: http://192.168.1.104/calendar/calendar/themes/                          
++ http://192.168.1.104/calendar/calendar/TODO (CODE:200|SIZE:3633)                     
+==> DIRECTORY: http://192.168.1.104/calendar/calendar/tools/                           
+==> DIRECTORY: http://192.168.1.104/calendar/calendar/translations/                    
+==> DIRECTORY: http://192.168.1.104/calendar/calendar/ws/          
+---- Entering directory: http://192.168.1.104/calendar/docs/ ----
+
+---- Entering directory: http://192.168.1.104/calendar/install/ ----
++ http://192.168.1.104/calendar/install/index.php (CODE:200|SIZE:12098)                
+==> DIRECTORY: http://192.168.1.104/calendar/install/sql/                              
+  
+---- Entering directory: http://192.168.1.104/mongoadmin ----
++ http://192.168.1.104/mongoadmin/index.php (CODE:200|SIZE:3208)    
+ 

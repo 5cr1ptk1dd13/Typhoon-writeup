@@ -1,0 +1,23 @@
+root@DKVN-WHEDO:~# dmitry -p 192.168.1.104
+Deepmagic Information Gathering Tool
+"There be some deep magic going on"
+
+HostIP:192.168.1.104
+HostName:typhoon.home
+
+Gathered TCP Port information for 192.168.1.104
+---------------------------------
+
+ Port		State
+
+21/tcp		open
+22/tcp		open
+25/tcp		open
+53/tcp		open
+80/tcp		open
+110/tcp		open
+111/tcp		open
+139/tcp		open
+143/tcp		open
+
+Portscan Finished: Scanned 150 ports, 140 ports were in state closed

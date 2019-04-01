@@ -1,0 +1,31 @@
+root@DKVN-WHEDO:~# nmap -sS -p- 192.168.1.104
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-01-17 13:39 CST
+Nmap scan report for typhoon.home (192.168.1.104)
+Host is up (0.00013s latency).
+Not shown: 65511 closed ports
+PORT      STATE SERVICE
+21/tcp    open  ftp
+22/tcp    open  ssh
+25/tcp    open  smtp
+53/tcp    open  domain
+80/tcp    open  http
+110/tcp   open  pop3
+111/tcp   open  rpcbind
+139/tcp   open  netbios-ssn
+143/tcp   open  imap
+445/tcp   open  microsoft-ds
+631/tcp   open  ipp
+993/tcp   open  imaps
+995/tcp   open  pop3s
+2049/tcp  open  nfs
+3306/tcp  open  mysql
+5432/tcp  open  postgresql
+6379/tcp  open  redis
+8080/tcp  open  http-proxy
+27017/tcp open  mongod
+34006/tcp open  unknown
+37079/tcp open  unknown
+44184/tcp open  unknown
+51185/tcp open  unknown
+56122/tcp open  unknown
+MAC Address: 08:00:27:2F:20:4F (Oracle VirtualBox virtual NIC)

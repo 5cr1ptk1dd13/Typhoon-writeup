@@ -1,0 +1,135 @@
+root@DKVN-WHEDO:~# nmap -A 192.168.1.104
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-01-17 13:39 CST
+Nmap scan report for typhoon.home (192.168.1.104)
+Host is up (0.00059s latency).
+Not shown: 983 closed ports
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 3.0.2
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.1.19
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 2
+|      vsFTPd 3.0.2 - secure, fast, stable
+|_End of status
+22/tcp   open  ssh         OpenSSH 6.6.1p1 Ubuntu 2ubuntu2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 02:df:b3:1b:01:dc:5e:fd:f9:96:d7:5b:b7:d6:7b:f9 (DSA)
+|   2048 de:af:76:27:90:2a:8f:cf:0b:2f:22:f8:42:36:07:dd (RSA)
+|   256 70:ae:36:6c:42:7d:ed:1b:c0:40:fc:2d:00:8d:87:11 (ECDSA)
+|_  256 bb:ce:f2:98:64:f7:8f:ae:f0:dd:3c:23:3b:a6:0f:61 (ED25519)
+25/tcp   open  smtp        Postfix smtpd
+|_smtp-commands: typhoon, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+| ssl-cert: Subject: commonName=typhoon
+| Not valid before: 2018-10-22T19:38:20
+|_Not valid after:  2028-10-19T19:38:20
+|_ssl-date: TLS randomness does not represent time
+53/tcp   open  domain      ISC BIND 9.9.5-3 (Ubuntu Linux)
+| dns-nsid: 
+|_  bind.version: 9.9.5-3-Ubuntu
+80/tcp   open  http        Apache httpd 2.4.7 ((Ubuntu))
+| http-robots.txt: 1 disallowed entry 
+|_/mongoadmin/
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-title: Typhoon Vulnerable VM by PRISMA CSI
+110/tcp  open  pop3        Dovecot pop3d
+|_pop3-capabilities: RESP-CODES AUTH-RESP-CODE CAPA PIPELINING STLS SASL UIDL TOP
+| ssl-cert: Subject: commonName=typhoon/organizationName=Dovecot mail server
+| Not valid before: 2018-10-22T19:38:49
+|_Not valid after:  2028-10-21T19:38:49
+|_ssl-date: TLS randomness does not represent time
+111/tcp  open  rpcbind     2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100003  2,3,4       2049/tcp  nfs
+|   100003  2,3,4       2049/udp  nfs
+|   100005  1,2,3      56122/tcp  mountd
+|   100005  1,2,3      57395/udp  mountd
+|   100021  1,3,4      42080/udp  nlockmgr
+|   100021  1,3,4      44184/tcp  nlockmgr
+|   100024  1          37079/tcp  status
+|   100024  1          47386/udp  status
+|   100227  2,3         2049/tcp  nfs_acl
+|_  100227  2,3         2049/udp  nfs_acl
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+143/tcp  open  imap        Dovecot imapd (Ubuntu)
+|_imap-capabilities: post-login more LITERAL+ Pre-login have OK listed LOGINDISABLEDA0001 capabilities ID SASL-IR IMAP4rev1 ENABLE LOGIN-REFERRALS STARTTLS IDLE
+| ssl-cert: Subject: commonName=typhoon/organizationName=Dovecot mail server
+| Not valid before: 2018-10-22T19:38:49
+|_Not valid after:  2028-10-21T19:38:49
+|_ssl-date: TLS randomness does not represent time
+445/tcp  open  netbios-ssn Samba smbd 4.1.6-Ubuntu (workgroup: WORKGROUP)
+631/tcp  open  ipp         CUPS 1.7
+|_http-server-header: CUPS/1.7 IPP/2.1
+|_http-title: Bad Request - CUPS v1.7.2
+993/tcp  open  ssl/imap    Dovecot imapd (Ubuntu)
+|_imap-capabilities: post-login LITERAL+ Pre-login more OK have listed AUTH=PLAINA0001 capabilities SASL-IR IMAP4rev1 ENABLE ID LOGIN-REFERRALS IDLE
+| ssl-cert: Subject: commonName=typhoon/organizationName=Dovecot mail server
+| Not valid before: 2018-10-22T19:38:49
+|_Not valid after:  2028-10-21T19:38:49
+|_ssl-date: TLS randomness does not represent time
+995/tcp  open  ssl/pop3    Dovecot pop3d
+|_pop3-capabilities: RESP-CODES AUTH-RESP-CODE CAPA USER PIPELINING SASL(PLAIN) UIDL TOP
+| ssl-cert: Subject: commonName=typhoon/organizationName=Dovecot mail server
+| Not valid before: 2018-10-22T19:38:49
+|_Not valid after:  2028-10-21T19:38:49
+|_ssl-date: TLS randomness does not represent time
+2049/tcp open  nfs_acl     2-3 (RPC #100227)
+3306/tcp open  mysql       MySQL (unauthorized)
+5432/tcp open  postgresql  PostgreSQL DB 9.3.3 - 9.3.5
+| ssl-cert: Subject: commonName=typhoon
+| Not valid before: 2018-10-22T19:38:20
+|_Not valid after:  2028-10-19T19:38:20
+|_ssl-date: TLS randomness does not represent time
+8080/tcp open  http        Apache Tomcat/Coyote JSP engine 1.1
+| http-methods: 
+|_  Potentially risky methods: PUT DELETE
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-server-header: Apache-Coyote/1.1
+|_http-title: Apache Tomcat
+MAC Address: 08:00:27:2F:20:4F (Oracle VirtualBox virtual NIC)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.9
+Network Distance: 1 hop
+Service Info: Hosts:  typhoon, TYPHOON; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: -39m58s, deviation: 1h09m16s, median: 1s
+|_nbstat: NetBIOS name: TYPHOON, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb-os-discovery: 
+|   OS: Unix (Samba 4.1.6-Ubuntu)
+|   Computer name: typhoon
+|   NetBIOS computer name: TYPHOON\x00
+|   Domain name: local
+|   FQDN: typhoon.local
+|_  System time: 2019-01-17T21:39:54+02:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-01-17 13:39:54
+|_  start_date: N/A
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.58 ms typhoon.home (192.168.1.104)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 24.10 seconds
+root@DKVN-WHEDO:~# 
