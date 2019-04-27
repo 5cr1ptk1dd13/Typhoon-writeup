@@ -1,4 +1,5 @@
-﻿Parmi les nombreux points de vulnérabilités, le web se pose comme un point sur lequel il faut porter un très grand intérêt. En effet les langages web sont aujourd'hui très puissants et peuvent servir pour executer tout un panel de commandes système. Ces dernières peuvent permettre l'execution de code arbitraire en vue de (liste non exhaustive):
+﻿Parmi les nombreux points de vulnérabilités, le web se pose comme un point sur lequel il faut porter un très grand intérêt. En effet les langages web sont aujourd'hui très puissants et peuvent servir pour exécuter tout un panel de commandes système. Ces dernières peuvent permettre l'exécution de code arbitraire en vue de (liste non exhaustive):
+
 * voler des données
 * saboter des éléments sur le serveur
 * latéraliser une attaque
